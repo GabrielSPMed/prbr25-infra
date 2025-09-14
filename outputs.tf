@@ -9,3 +9,7 @@ output "silver_bucket" {
 output "gold_bucket" {
   value = module.gold_bucket.bucket_name
 }
+
+output "glue_database_name" {
+  value = aws_glue_catalog_database.prbr25.name
+}
