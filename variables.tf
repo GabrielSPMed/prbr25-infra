@@ -5,10 +5,10 @@ variable "project" {
 
 variable "env" {
   default     = "dev"
-  description = "Environment (dev, prod, etc.)"
+  description = "Environment"
 }
 
 variable "unique_suffix" {
-  default     = "ploiw"  # same suffix you used in bootstrap
+  default     = "ploiw"
   description = "Unique suffix for bucket names"
 }
