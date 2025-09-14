@@ -9,7 +9,7 @@ variable "profile" {
 }
 variable "project" {
   type    = string
-  default = "br-smash"
+  default = "prbr25"
 }
 variable "env" {
   type    = string
@@ -19,7 +19,7 @@ variable "env" {
 # optional suffix to guarantee global uniqueness of bucket names
 variable "unique_suffix" {
   type    = string
-  default = ""
+  default = "ploiw"
 }
 
 locals {
