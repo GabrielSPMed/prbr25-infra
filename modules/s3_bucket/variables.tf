@@ -1,11 +1,19 @@
-variable "name"          { type = string }
-variable "project"       { type = string }
-variable "env"           { type = string }
-variable "force_destroy" {
-  type    = bool
-  default = false
+variable "project" {
+  description = "Project name"
+  type        = string
 }
-variable "tags" {
-  type    = map(string)
-  default = {}
+
+variable "env" {
+  description = "Environment name (e.g. dev, prod)"
+  type        = string
+}
+
+variable "unique_suffix" {
+  description = "Random suffix to ensure unique bucket names"
+  type        = string
+}
+
+variable "name" {
+  description = "Logical name of the bucket (e.g. bronze, silver, gold)"
+  type        = string
 }
