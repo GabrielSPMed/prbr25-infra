@@ -1,26 +1,23 @@
 module "bronze_bucket" {
   source        = "./modules/s3_bucket"
-  name          = local.bronze_name
   project       = var.project
   env           = var.env
-  force_destroy = false
-  tags          = local.common_tags
+  unique_suffix = var.unique_suffix
+  name          = "bronze"
 }
 
 module "silver_bucket" {
   source        = "./modules/s3_bucket"
-  name          = local.silver_name
   project       = var.project
   env           = var.env
-  force_destroy = false
-  tags          = local.common_tags
+  unique_suffix = var.unique_suffix
+  name          = "silver"
 }
 
 module "gold_bucket" {
   source        = "./modules/s3_bucket"
-  name          = local.gold_name
   project       = var.project
   env           = var.env
-  force_destroy = false
-  tags          = local.common_tags
+  unique_suffix = var.unique_suffix
+  name          = "gold"
 }
