@@ -1,16 +1,14 @@
-terraform {
-  required_version = ">= 1.6.0"
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.56"
-    }
-  }
-  # Leave values empty; we pass them via -backend-config on tofu init
-  backend "s3" {}
+variable "project" {
+  default     = "prbr25"
+  description = "Project name"
 }
 
-provider "aws" {
-  region  = var.region
-  profile = var.profile
+variable "env" {
+  default     = "dev"
+  description = "Environment (dev, prod, etc.)"
+}
+
+variable "unique_suffix" {
+  default     = "ploiw"  # same suffix you used in bootstrap
+  description = "Unique suffix for bucket names"
 }
